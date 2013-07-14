@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Instagram Tag Reader</title>
 		<link rel="stylesheet" type="text/css" href="http://reset5.googlecode.com/hg/reset.min.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/instagramTagParser.js"></script>
 
 		<!-- Bootstrap -->
@@ -34,8 +34,10 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			
-			$('#tagIs').append("#" + GetQueryStringParams('tag'));
+			var queryStringTag = GetQueryStringParams('tag');
+			if (queryStringTag == null)
+				queryStringTag = defaultTag;
+			$('#tagIs').append("#" + queryStringTag);
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>

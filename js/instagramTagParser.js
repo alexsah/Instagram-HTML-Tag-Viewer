@@ -1,4 +1,5 @@
 var maxID;
+var defaultTag = "apple";
 
 function GetQueryStringParams(sParam) {
 	var sPageURL = window.location.search.substring(1);
@@ -18,7 +19,7 @@ function getInstagramObjects() {
 	var tag = GetQueryStringParams('tag');
 
 	if (tag == null)
-		tag = "1dcoles";
+		tag = defaultTag;
 	var count = 30;
 	
 	//Tutorial access token
