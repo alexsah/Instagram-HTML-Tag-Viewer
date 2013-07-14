@@ -5,8 +5,7 @@ This is a web page that runs on javascript that pulls in all images for a given 
 
 This was based on the code found here: http://cfg.good.is/lessons/instagram-api
 
-It is an easy start - and in this source I am using their instagram app key - if you get app 
-key failures you may need to get your own from instagram.
+It is an easy start - and in this source I am using their instagram access token - if you get token failures you may need to get your own from instagram (http://instagram.com/developers).
 
 ###How to use:
 Upload to a web server.
