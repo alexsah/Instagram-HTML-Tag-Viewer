@@ -17,6 +17,6 @@ instagram.html - it will take show you just the default tag of 1dcoles
 You can also use a query string to look for another tag:
 instagram.html?tag=whatever - replace whatever with the tag you want to search for. 
 
-This can be currently previewed in all it's glory here:
-http://alexsah.com/dev/instagram.html
+This can be currently previewed in all it's glory here:<br />
+http://alexsah.com/dev/instagram.html<br />
 http://alexsah.com/dev/instagram.html?tag=github
