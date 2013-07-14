@@ -11,7 +11,7 @@ It is an easy start - and in this source I am using their instagram access token
 Upload to a web server.
 
 All you'll need to do is go to 
-instagram.html - it will take show you just the default tag of 1dcoles
+instagram.html - it will take show you just the default tag of apple.
 
 You can also use a query string to look for another tag:
 instagram.html?tag=whatever - replace whatever with the tag you want to search for. 
