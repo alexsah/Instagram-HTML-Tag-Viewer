@@ -1,5 +1,5 @@
 var maxID;
-var defaultTag = "apple";
+var defaultTag = "coles1d";
 
 function GetQueryStringParams(sParam) {
 	var sPageURL = window.location.search.substring(1);
@@ -21,7 +21,7 @@ function getInstagramObjects() {
 	if (tag == null)
 		tag = defaultTag;
 	var count = 30;
-	
+
 	//Tutorial access token
 	var access_token = '22033045.ea9028a.eec94286a2e049429fe51c3fbc95db20';
 	var access_parameters = {
@@ -49,7 +49,7 @@ function getInstagramObjects() {
 
 				for (var key in photos ) {
 					var photo = photos[key];
-					$('#target').append('<a href="' + photo.link + '" target="_blank" ><img src="' + photo.images.thumbnail.url + '"></a>');
+					$('#target').append('<a href="' + photo.link + '" target="_blank" ><img class="img-polaroid" src="' + photo.images.thumbnail.url + '"></a>');
 				}
 
 				var maxIDOrig = GetQueryStringParamsFromString('max_tag_id', nextURL);
