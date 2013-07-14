@@ -21,9 +21,7 @@ function getInstagramObjects() {
 	if (tag == null)
 		tag = defaultTag;
 	var count = 30;
-	
-	//My access token
-	var access_token = "36726839.d28d8a6.35440034c42a4ae3b649e1ef6786b790";
+
 	//Tutorial access token
 	var access_token = '22033045.ea9028a.eec94286a2e049429fe51c3fbc95db20';
 	var access_parameters = {
