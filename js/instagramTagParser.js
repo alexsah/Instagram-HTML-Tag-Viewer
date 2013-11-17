@@ -1,5 +1,5 @@
 var maxID;
-var defaultTag = "coles1d";
+var defaultTag = "alexpjwedding";
 
 function GetQueryStringParams(sParam) {
 	var sPageURL = window.location.search.substring(1);
@@ -22,8 +22,10 @@ function getInstagramObjects() {
 		tag = defaultTag;
 	var count = 30;
 	
+	//My access token
+	var access_token = "36726839.d28d8a6.35440034c42a4ae3b649e1ef6786b790";
 	//Tutorial access token
-	var access_token = '22033045.ea9028a.eec94286a2e049429fe51c3fbc95db20';
+	//var access_token = '22033045.ea9028a.eec94286a2e049429fe51c3fbc95db20';
 	var access_parameters = {
 		access_token : access_token
 	};
@@ -45,21 +47,23 @@ function getInstagramObjects() {
 			var photos = instagram_data.data;
 			var nextURL = instagram_data.pagination.next_url;
 
-			if (photos.length > 0) {
+            if (photos.length > 0) {
 
-				for (var key in photos ) {
-					var photo = photos[key];
-					$('#target').append('<a href="' + photo.link + '" target="_blank" ><img class="img-polaroid" src="' + photo.images.thumbnail.url + '"></a>');
-				}
+                for (var key in photos) {
+                    var photo = photos[key];
+                    $('#target').append('<a href="' + photo.link + '" target="_blank" ><img class="img-polaroid" src="' + photo.images.thumbnail.url + '"></a>');
+                }
 
-				var maxIDOrig = GetQueryStringParamsFromString('max_tag_id', nextURL);
-				// .../instagram.html?tag=qwerty
-				window.maxID = maxIDOrig;
+                if (nextURL != undefined) window.maxID = GetQueryStringParamsFromString('max_tag_id', nextURL);
+                else $('#moreButton').css('display', 'none');
 
-			} else {
-				//if the photos variable doesn’t hold data
-				$('#target').append("Hmm.  I couldn’t find anything!");
-			}
+
+
+
+            } else {
+                //if the photos variable doesn’t hold data
+                $('#target').append( "Hmm.  I couldn’t find anything!" );
+            }
 		} else {
 			//if we didn’t get a 200 (success) request code from instagram
 			//then we display instagram’s error message instagram
@@ -68,8 +72,8 @@ function getInstagramObjects() {
 		}
 
 	}
-	
-	
+
+
 
 	function GetQueryStringParamsFromString(sParam, url) {
 		var sPageURL = url.substring(57);
